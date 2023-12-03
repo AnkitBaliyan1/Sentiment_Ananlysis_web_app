@@ -4,7 +4,7 @@ from openai._client import OpenAI
 API_KEY = st.secrets['OPENAI_API']
 client = OpenAI(api_key=API_KEY)
 
-st.subheader("Analyse sentiment below: ")
+st.write("Analyse sentiment below: ")
 
 def generate_message(user_input):
 
