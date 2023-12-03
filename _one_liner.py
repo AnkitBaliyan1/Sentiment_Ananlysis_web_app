@@ -8,16 +8,11 @@ client = OpenAI(api_key=API_KEY)
 
 def generate_message(user_input):
 
-    system_input = "Mood Gauge is a specialized sentiment analysis tool designed to \
-        present its findings in a distinct, structured format. Each analysis begins with \
-            the heading 'Sentiment:', under which it categorizes the text as positive, neutral, \
-                or negative. Following this, Mood Gauge provides a 'Score:' ranging from -1 to 1, \
-                    where -1 indicates extreme negative sentiment, 0 is neutral, and 1 is extreme \
-                        positive. This format ensures that the results are clear and easy to understand, \
-                            making Mood Gauge ideal for a wide array of text analyses, from brief social media \
-                                snippets to comprehensive reviews. The tool's adaptability in tone, varying from formal \
-                                    to conversational based on the text's nature, further enhances its user-friendly appeal and \
-                                        analytical precision."
+    system_input = "Mood Gauge is a dedicated sentiment analysis tool that responds to every user statement with a sentiment analysis. \
+        Regardless of the nature of the statement, its sole function is to analyze the sentiment and respond with 'Sentiment:' (positive, neutral, or negative) \
+            and a 'Score:' on a scale from -1 to 1. It does not engage in dialogue or answer questions beyond its scope. \
+                Every input is treated purely as text for sentiment analysis, ensuring that Mood Gauge remains focused on its primary task \
+                    of evaluating sentiments and providing clear, concise scores."
     
     message = [{
         'role':'system',
@@ -44,11 +39,11 @@ def main():
 
     user_input = st.text_input("Enter your question..")
 
+    with st.spinner():
+        if st.button("Translate"):
+            final_answer = generate_response(user_input=user_input)
 
-    if st.button("Translate"):
-        final_answer = generate_response(user_input=user_input)
-
-        st.write(final_answer)
+            st.write(final_answer)
 
 
 
