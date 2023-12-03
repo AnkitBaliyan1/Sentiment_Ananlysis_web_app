@@ -49,6 +49,7 @@ def main():
                 # Perform operation on 'input' column
                 df['output'] = df['input'].apply(lambda x: generate_response(user_input=x))  
                 df[['Sentiment','Score']] = df['output'].apply(lambda x: pd.Series(x.split()[1:4:2]))
+                df.drop('output', axis=1, inplace=True)
 
                 # Show processed DataFrame
                 st.write("Processed DataFrame:")
