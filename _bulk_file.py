@@ -47,7 +47,8 @@ def main():
         if run:
             with st.spinner():
                 # Perform operation on 'input' column
-                df['output'] = df['input'].apply(lambda x: generate_response(user_input=x))  # Replace with your operation
+                df['output'] = df['input'].apply(lambda x: generate_response(user_input=x))  
+                df[['Sentiment','Score']] = df['output'].apply(lambda x: pd.Series(x.split()[1:4:2]))
 
                 # Show processed DataFrame
                 st.write("Processed DataFrame:")
