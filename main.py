@@ -1,8 +1,8 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import _about, _bulk_file, _translate_liner, _contact
+import _about, _bulk_file, _one_liner, _contact
 
-st.title("Web Translation For Aangan Trust")
+st.title("Web App for Sentiment Analysis")
 
 
 
@@ -10,13 +10,7 @@ st.title("Web Translation For Aangan Trust")
 users = {
     "admin": "password123",
     "user1": "mypassword",
-    "kunal": "weEkpassword",
-    "aangan": "weEkpassword",
-    "djyoti": "weEkpassword",
-    "nayan": "weEkpassword",
-    "sgeorge": "weEkpassword",
-    "oindrila": "weEkpassword",
-    "maheshwari": "weEkpassword"
+    "kunal": "weEkpassword"
 }
 
 # Define functions for each page
@@ -65,15 +59,15 @@ def main_app():
 
     with st.sidebar:
         selected = option_menu("Main Menu", 
-                ["About", "Translate - One liner", "Bulk Translate","Info", "Contact Us"],
+                ["About", "Analyse - One liner", "Bulk Analysis","Info", "Contact Us"],
             icons=['house', 'globe', 'filetype-csv', 'info', 'envelope'],
             menu_icon="cast", default_index=0)
 
     if selected == 'About':
         _about.main()
-    elif selected == 'Translate - One liner':
-        _translate_liner.main()
-    elif selected == "Bulk Translate":
+    elif selected == 'TAnalyse - One liner':
+        _one_liner.main()
+    elif selected == "Bulk Analysis":
         _bulk_file.main()
     elif selected == 'Info':
         info_page()
