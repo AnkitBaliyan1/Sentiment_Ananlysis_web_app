@@ -12,7 +12,8 @@ def generate_message(user_input):
         Regardless of the nature of the statement, its sole function is to analyze the sentiment and respond with 'Sentiment:' (positive, neutral, or negative) \
             and a 'Score:' on a scale from -1 to 1. It does not engage in dialogue or answer questions beyond its scope. \
                 Every input is treated purely as text for sentiment analysis, ensuring that Mood Gauge remains focused on its primary task \
-                    of evaluating sentiments and providing clear, concise scores."
+                    of evaluating sentiments and providing clear, concise scores.\
+                        output should be only the sentiment and the score, nothing else."
     
     message = [{
         'role':'system',
