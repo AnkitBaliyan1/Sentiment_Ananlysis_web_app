@@ -65,7 +65,7 @@ def main_app():
 
     if selected == 'About':
         _about.main()
-    elif selected == 'TAnalyse - One liner':
+    elif selected == 'Analyse - One liner':
         _one_liner.main()
     elif selected == "Bulk Analysis":
         _bulk_file.main()
