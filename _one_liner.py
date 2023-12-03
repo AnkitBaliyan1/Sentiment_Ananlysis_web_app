@@ -4,7 +4,7 @@ from openai._client import OpenAI
 API_KEY = st.secrets['OPENAI_API']
 client = OpenAI(api_key=API_KEY)
 
-st.subheader("Analyse sentiment below: ")
+
 
 def generate_message(user_input):
 
@@ -39,6 +39,8 @@ def generate_response(user_input, model='gpt-3.5-turbo', temperature = 0.2):
     return response.choices[0].message.content
     
 def main():
+
+    st.text("Analyse sentiment below: ")
 
     user_input = st.text_input("Enter your question..")
 
