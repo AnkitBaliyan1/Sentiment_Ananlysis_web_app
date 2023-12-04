@@ -13,7 +13,7 @@ def get_table_download_link(df, filename, text):
 
 
 def main():
-    st.title("Bulk file analysis")
+    st.subheader("Bulk file analysis")
 
     # Display a sample dataframe
     st.write("Sample input file format:")
