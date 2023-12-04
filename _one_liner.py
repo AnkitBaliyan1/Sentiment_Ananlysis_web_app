@@ -41,7 +41,7 @@ def main():
     user_input = st.text_input("Enter your question..")
 
     with st.spinner():
-        if st.button("Translate"):
+        if st.button("Get Sentiment"):
             final_answer = generate_response(user_input=user_input)
 
             st.write(final_answer)
