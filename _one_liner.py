@@ -36,7 +36,7 @@ def generate_response(user_input, model='gpt-3.5-turbo', temperature = 0.2):
     
 def main():
 
-    st.write("Analyse sentiment below: ")
+    st.subheader("Analyse sentiment below: ")
 
     user_input = st.text_input("Enter your question..")
 
