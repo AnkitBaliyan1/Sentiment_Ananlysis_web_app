@@ -40,7 +40,7 @@ Before using the application, please ensure you have the following prerequisites
 
    ```bash
    git clone https://github.com/AnkitBaliyan1/Sentiment_Ananlysis_web_app.git
-   cd sentiment-analysis-app
+   cd Sentiment_Ananlysis_web_app
    ```
 
 2. Install the required dependencies:
